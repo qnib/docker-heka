@@ -1,0 +1,16 @@
+[hekad]
+maxprocs = 2
+
+[LogstreamerInput]
+log_directory = "/var/log"
+file_match = 'messages'
+
+[PayloadEncoder]
+append_newlines = true
+
+[LogOutput]
+message_matcher = "TRUE"
+encoder = "PayloadEncoder"
+
+[DashboardOutput]
+ticker_interval = 30
