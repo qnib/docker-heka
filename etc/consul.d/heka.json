@@ -1,0 +1,13 @@
+{
+  "services": [
+    {
+        "id": "heka",
+        "name": "heka",
+        "tags": [],
+        "checks": [{
+            "script": "supervisorctl status heka | grep RUNNING",
+            "interval": "5s"
+        }]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[hekad]
+maxprocs = 2
+
+[TcpInput]
+address = ":5514"
+splitter = "newline_splitter"
+decoder = "newline_decoder"
+
+[newline_splitter]
+type = "TokenSplitter"
+delimiter = '\n'
+
+[newline_decoder]
+type = "ScribbleDecoder"
+
+[PayloadEncoder]
+append_newlines = true
+
+[LogOutput]
+message_matcher = "TRUE"
+encoder = "PayloadEncoder"
