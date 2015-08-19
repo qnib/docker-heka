@@ -7,3 +7,4 @@ RUN curl -fsL https://github.com/mozilla-services/heka/releases/download/v${HEKA
 RUN mv /opt/heka/share/heka /usr/share/heka
 ADD /etc/hekad.toml /etc/
 ADD etc/rsyslog.d/file.conf /etc/rsyslog.d/
+ADD opt/qnib/rsyslog/bin/rm_messages.sh /opt/qnib/rsyslog/bin/
