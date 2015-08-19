@@ -1,0 +1,7 @@
+heka:
+   image: qnib/heka
+   hostname: heka
+   ports:
+   - 4532:4532
+   environment:
+   - FORWARD_TO_HEKA=true
