@@ -1,7 +1,21 @@
+consul:
+  image: qnib/consul
+  ports:
+   - "8500:8500"
+  environment:
+  - DC_NAME=dc1
+  dns: 127.0.0.1
+  hostname: consul
+  privileged: true
+
 heka:
    image: qnib/heka
    hostname: heka
+   dns: 127.0.0.1
    ports:
    - 4532:4532
    environment:
    - FORWARD_TO_HEKA=true
+   - DC_NAME=dc1
+   links:
+   - consul:consul

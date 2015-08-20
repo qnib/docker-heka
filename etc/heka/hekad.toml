@@ -1,11 +1,2 @@
-[TcpInput]
-address = ":5514"
-splitter = "newline_splitter"
-decoder = "newline_decoder"
-
-[newline_splitter]
-type = "TokenSplitter"
-delimiter = '\n'
-
-[newline_decoder]
-type = "ScribbleDecoder"
+[hekad]
+maxprocs = 2
