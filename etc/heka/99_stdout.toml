@@ -1,0 +1,6 @@
+[PayloadEncoder]
+append_newlines = true
+
+[LogOutput]
+message_matcher = "TRUE"
+encoder = "PayloadEncoder"
