@@ -8,6 +8,16 @@
             "script": "supervisorctl status heka | grep RUNNING",
             "interval": "5s"
         }]
+    },
+    {
+        "id": "heka-dash",
+        "name": "heka-dash",
+        "tags": [],
+        "port": 4352,
+        "checks": [{
+            "script": "nmap 127.0.0.1 -PN -p 4352 | grep open",
+            "interval": "5s"
+        }]
     }
   ]
 }
