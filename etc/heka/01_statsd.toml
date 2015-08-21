@@ -1,0 +1,8 @@
+[statsd_input]
+type = "StatsdInput"
+stat_accum_name = "stat_accumulator"
+
+[stat_accumulator]
+type = "StatAccumInput"
+ticker_interval = 60
+emit_in_fields = true
