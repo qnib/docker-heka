@@ -14,8 +14,12 @@ heka:
    dns: 127.0.0.1
    ports:
    - 4352:4352
+   - 5514:5514
+   - 8125/udp:8125/udp
    environment:
    - FORWARD_TO_HEKA=true
    - DC_NAME=dc1
    links:
    - consul:consul
+   volumes:
+   - ./etc/heka/:/etc/heka/

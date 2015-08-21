@@ -4,5 +4,5 @@ stat_accum_name = "stat_accumulator"
 
 [stat_accumulator]
 type = "StatAccumInput"
-ticker_interval = 60
+ticker_interval = 5
 emit_in_fields = true
