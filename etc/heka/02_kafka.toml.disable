@@ -1,0 +1,4 @@
+[KafkaInputTest]
+type = "KafkaInput"
+topic = "syslog"
+addrs = ["kafka.service.dc1.consul:9092"]
