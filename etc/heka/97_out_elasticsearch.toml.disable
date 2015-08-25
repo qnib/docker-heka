@@ -1,0 +1,13 @@
+[ESLogstashV0Encoder]
+es_index_from_timestamp = true
+type_name = "%{Type}"
+
+[ElasticSearchOutput]
+message_matcher = "TRUE"
+encoder = "ESLogstashV0Encoder"
+flush_interval = 50
+server = "http://elasticsearch.service.dc1.consul:9200"
+
+[ElasticSearchOutput.buffering]
+max_file_size = 268435456
+
