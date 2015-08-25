@@ -9,7 +9,7 @@ consul:
   privileged: true
 
 heka:
-   image: qnib/heka
+   build: .
    hostname: heka
    dns: 127.0.0.1
    ports:
