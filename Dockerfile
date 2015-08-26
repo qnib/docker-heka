@@ -2,7 +2,7 @@
 FROM qnib/consul
 
 RUN yum install -y bsdtar cmake make golang git-core patch
-RUN git clone https://github.com/mozilla-services/heka.git /opt/heka-dev/
+RUN echo 3;git clone -b snappy https://github.com/qnib/heka.git /opt/heka-dev/
 RUN cd /opt/heka-dev/ && \
     sh build.sh 
 RUN mkdir -p /usr/share/heka && \

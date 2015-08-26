@@ -19,3 +19,5 @@ heka:
    - DC_NAME=dc1
    links:
    - consul:consul
+   #volumes:
+   #- ./etc/heka/:/etc/heka/
