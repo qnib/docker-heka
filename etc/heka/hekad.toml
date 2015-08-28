@@ -1,2 +1,3 @@
 [hekad]
-maxprocs = 2
+maxprocs = 4
+share_dir = "/opt/heka/build/heka/share/heka/"
