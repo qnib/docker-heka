@@ -10,3 +10,4 @@ RUN echo "/opt/heka/bin/hekad -config=/etc/heka/hekad.toml" >> /root/.bash_histo
 ADD /etc/heka/*.toml /etc/heka/
 ADD etc/consul.d/heka.json /etc/consul.d/
 ADD etc/supervisord.d/heka.ini /etc/supervisord.d/
+ADD opt/qnib/heka/bin/kafka_connections.sh /opt/qnib/heka/bin/
