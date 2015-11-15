@@ -1,0 +1,13 @@
+{
+  "services": [
+    {
+        "id": "kafka_con",
+        "name": "kafka_con",
+        "tags": [],
+        "checks": [{
+            "script": "/opt/qnib/heka/bin/kafka_connections.sh",
+            "interval": "4s"
+        }]
+    }
+  ]
+}
