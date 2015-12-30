@@ -1,0 +1,19 @@
+[ProcStats]
+type = "FilePollingInput"
+ticker_interval = 1
+file_path = "/proc/stat"
+decoder = "ProcStatDecoder"
+
+[ProcStatDecoder]
+type = "SandboxDecoder"
+filename = "lua_decoders/linux_procstat.lua"
+
+[ProcStatFilter]
+type = "SandboxFilter"
+filename = "lua_filters/procstat.lua"
+preserve_data = true
+message_matcher = "Type == 'stats.procstat'"
+[ProcStatFilter.config]
+    whitelist = "cpu$"
+    extras = true
+    percent_integer = true

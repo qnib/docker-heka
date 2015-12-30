@@ -1,7 +1,16 @@
 [TcpInput]
-address = ":5514"
+address = ":55514"
 splitter = "newline_splitter"
-decoder = "newline_decoder"
+decoder = "JsonDecoder"
+
+[JsonDecoder]
+type = "SandboxDecoder"
+filename = "lua_decoders/json.lua"
+    [JsonDecoder.config]
+    type = "artemis"
+    payload_keep = true
+    map_fields = true
+    Severity = "severity"
 
 [newline_splitter]
 type = "TokenSplitter"

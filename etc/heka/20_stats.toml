@@ -1,0 +1,16 @@
+[stat-graph]
+type = "SandboxFilter"
+filename = "lua_filters/stat_graph.lua"
+ticker_interval = 5
+preserve_data = true
+message_matcher = "Type == 'stats.procstat'"
+
+  [stat-graph.config]
+  title = "Hits and Misses"
+  rows = 1440
+  stat_aggregation = "none"
+  stat_unit = "count"
+  sec_per_row = 5
+  stats = "processes"
+  stat_labels = "processes"
+  preservation_version = 1

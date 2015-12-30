@@ -4,13 +4,16 @@ consul:
    - "8500:8500"
   environment:
   - DC_NAME=dc1
+   - CONSUL_BOOTSTRAP=true
   dns: 127.0.0.1
   hostname: consul
+  container_name: consul
   privileged: true
 
 heka:
-   build: .
+   image: qnib/heka
    hostname: heka
+   container_name: heka
    dns: 127.0.0.1
    ports:
    - 4352:4352
