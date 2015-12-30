@@ -1,0 +1,4 @@
+$template ls_json,"{%timestamp:::date-rfc3339,jsonf:@timestamp%,\"@message\":\"%msg:::json%\",\"@fields\":{%fromhost:::jsonf:host%,%syslogfacility-text:::jsonf:syslog_facility%,%syslogfacility:::jsonf:syslog_facility_code%,%syslogseverity-text:::jsonf:sysl
+og_severity%,%syslogseverity:::jsonf:syslog_severity_code%,%app-name:::jsonf:program%,%procid:::jsonf:pid%}}"
+
+*.* @@127.0.0.1:55514;ls_json

@@ -6,11 +6,6 @@ decoder = "JsonDecoder"
 [JsonDecoder]
 type = "SandboxDecoder"
 filename = "lua_decoders/json.lua"
-    [JsonDecoder.config]
-    type = "artemis"
-    payload_keep = true
-    map_fields = true
-    Severity = "severity"
 
 [newline_splitter]
 type = "TokenSplitter"

@@ -3,7 +3,7 @@ consul:
   ports:
    - "8500:8500"
   environment:
-  - DC_NAME=dc1
+   - DC_NAME=dc1
    - CONSUL_BOOTSTRAP=true
   dns: 127.0.0.1
   hostname: consul
@@ -20,8 +20,8 @@ heka:
    - 5514:5514
    - 8125/udp:8125/udp
    environment:
-   - FORWARD_TO_HEKA=true
    - DC_NAME=dc1
+   - FORWARD_TO_HEKA=true
    links:
    - consul:consul
    volumes:

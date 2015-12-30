@@ -10,5 +10,5 @@ message_matcher = "TRUE"
 encoder = "RstEncoder"
 
 
-[DashboardOutput]
-ticker_interval = 5
+#[DashboardOutput]
+#ticker_interval = 5
