@@ -1,7 +1,7 @@
 ###### QNIBTerminal images
 FROM qnib/consul
 
-ENV HEKA_VER 0.10.0b2
+ENV HEKA_VER 0.10.0
 #RUN yum install -y make go git-core patch cmake && \
 #    git clone -b dev https://github.com/mozilla-services/heka.git /opt/heka/ 
 #RUN cd /opt/heka/ && \
